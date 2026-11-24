@@ -11,3 +11,5 @@ The gauntlet supplies the legal root moves. The engine evaluates material and pi
 ## Reproduce the package
 
 Run the official kit's `makefun compress engine-source.py --out main.py` from the engine directory with the readable source from its submission bundle. The packed entry is within the 4,096-byte limit and uses only the Python standard library.
+
+The engine completes successive depths within a deterministic 30,000-node budget per move. If the next depth exceeds the budget, it returns the move from the last completed depth.
