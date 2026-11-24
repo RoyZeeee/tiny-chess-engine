@@ -6,4 +6,4 @@
 
 Deterministic alpha-beta search for the [make.fun](https://make.fun) Tiny Chess gauntlet. Run `python3 main.py` with the official gauntlet's `MAKEFUN_ENV_URL` set.
 
-The gauntlet supplies the legal root moves. The engine evaluates material and piece activity after two more plies of search. Internal move generation approximates legality and omits castling and en passant replies. No clock or random source affects the choice.
+The gauntlet supplies the legal root moves. The engine evaluates material and piece activity after two more plies of search. Internal search filters moves that leave the mover in check and distinguishes checkmate from stalemate. It still omits castling and en passant replies. No clock or random source affects the choice.
